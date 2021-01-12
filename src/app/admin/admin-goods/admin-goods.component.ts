@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {UsersService} from '../../services/users.service';
 import {GoodsService} from '../../services/goods.service';
-import { PDFDocument, rgb } from 'pdf-lib';
 @Component({
   selector: 'app-admin-goods',
   templateUrl: './admin-goods.component.html',
@@ -19,7 +18,6 @@ export class AdminGoodsComponent implements OnInit {
 // tslint:disable-next-line:variable-name
   price_filtered_items: Array<any>;
   constructor(
-    // private pdfDoc: PDFDocument,
     public firebaseService: GoodsService,
     private router: Router
   ) { }
