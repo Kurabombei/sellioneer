@@ -1,0 +1,86 @@
+agm-map{
+  height: 80%;
+}
+.filter-by-age {
+  color: #6c757d;
+}
+.title {
+  align-self: center;
+}
+
+.age-slider {
+  width: 85%;
+}
+
+.users-list {
+  padding: 40px 60px;
+}
+.image-col {
+  text-align: center;
+}
+.image {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.text-col {
+  margin: auto 0px;
+}
+.actions-col {
+  text-align: center;
+  margin: auto 0px;
+}
+.action {
+  line-height: 1;
+}
+.icon {
+  font-size: 20px;
+}
+footer {
+  padding: 2em 0;
+  text-align: center;
+  border-top: 10px solid #EFF4FF;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+}
+
+.footcontainer {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  box-shadow: 0 0 black;
+}
+
+ul.social {
+  display: flex;
+  align-items: center;
+  align-content: space-between;
+
+  padding: 0;
+  margin: 1em 0 0.5em 0;
+}
+
+ul.social li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+ul.social li a {
+  cursor: pointer;
+  display: flex;
+
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+ul.social li h1 {
+  flex-grow: 2;
+  color: white;
+  text-align: center;
+  padding-left: 1em;
+  padding-bottom: 0.5em;
+}

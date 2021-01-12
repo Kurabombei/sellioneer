@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "sellioneer": {
+      "hosting": {
+        "sellioneer": [
+          "sellioneer"
+        ]
+      }
+    }
+  }
+}

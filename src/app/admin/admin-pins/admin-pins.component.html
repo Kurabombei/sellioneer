@@ -1,0 +1,38 @@
+<!--<p>Тут твої списки користувачів по ролям:</p>-->
+<!--<ul>-->
+<!--  <li>Петро</li>-->
+<!--  <li>Оксана</li>-->
+<!--</ul>-->
+<!--<ul>-->
+<!--  <li *ngFor="let item of this.dataService.users ">-->
+<!--    {{ item.payload.doc.data().name }}-->
+<!--  </li>-->
+<!--</ul>-->
+<!--<ul>-->
+<!--  <li *ngFor="let item of this.dataService.providers">-->
+<!--    {{item.payload.doc.data().name}}-->
+<!--  </li>-->
+<!--</ul>-->
+<!--<ul>-->
+<!--  <li *ngFor="let item of this.dataService.admins">-->
+<!--    {{ item.payload.doc.data().name }}-->
+<!--  </li>-->
+<!--</ul>-->
+
+<div class="list-group users-list">
+  <div *ngFor="let item of items" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="row">
+      <div class="col col-md-2 image-col">
+        <img class="image" [src]="item.payload.doc.data().avatar">
+      </div>
+      <div class="col col-md-10 text-col">
+        <h5 class="mb-1">{{item.payload.doc.data().name}}</h5>
+        <h5 class="mb-1">UID: {{item.payload.doc.data().uid}}</h5>
+        <small class="col col-md-4 small-text-col">Вік: {{item.payload.doc.data().age}} </small>
+        <small class="col col-md-4 small-text-col">Пошта: {{item.payload.doc.data().email}}</small>
+        <small class="col col-md-4 small-text-col">Телефон: {{item.payload.doc.data().phone}}</small>
+      </div>
+    </div>
+  </div>
+</div>
+

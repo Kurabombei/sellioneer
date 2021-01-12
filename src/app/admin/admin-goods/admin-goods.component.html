@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col-md-4 offset-md-1">
+    <div class="input-group">
+      <mat-card style="width: 100%">
+        <input matInput  type="text" class="form-control" [(ngModel)]="searchValue" [ngModelOptions]="{standalone: true}" placeholder="Пошук за іменем..." (keyup)="searchByName()">
+        <!--        <div class="input-group-append">-->
+        <!--          <span class="input-group-text"><ion-icon class="icon" name="search"></ion-icon></span>-->
+        <!--        </div>-->
+      </mat-card>
+    </div>
+  </div>
+  <div class="col-md-1 offset-md-3">
+    <a routerLink="/create-good">Створити новий товар</a>
+  </div>
+</div>
+<div class="list-group goods-list">
+  <div *ngFor="let item of items" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="row">
+      <div class="col col-md-2 image-col">
+        <img class="image" [src]="item.payload.doc.data().avatar">
+      </div>
+      <div class="col col-md-8 text-col">
+        <h5 class="mb-1">{{item.payload.doc.data().name}} у ціну {{item.payload.doc.data().price}} (грн)</h5>
+        <small>В наявності: {{item.payload.doc.data().quantity }} </small>
+        <small>Про товар: {{item.payload.doc.data().comment}} </small>
+      </div>
+      <div class="col col-md-2 actions-col">
+        <button class="btn btn-outline-primary action" (click)="viewDetails(item)" type="button">
+          <ion-icon class="icon" name="arrow-round-forward"></ion-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

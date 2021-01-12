@@ -1,0 +1,61 @@
+<div class="create-page">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">Create User</li>
+<!--      <li><button mat-raised-button class="submit-button" color="primary" type="button" (click)></button></li>-->
+    </ol>
+  </nav>
+  <div class="page-content">
+    <div class="row">
+      <div class="col col-md-4">
+        <img class="img-avatar" src="{{avatarLink}}">
+        <button mat-stroked-button class="change-img-button" color="primary" (click)="openDialog()">Change Image</button>
+      </div>
+
+      <div class="col col-md-8">
+
+        <form class="create-form" [formGroup]="userCreateForm" novalidate (ngSubmit)="onSubmit(userCreateForm.value)">
+
+          <div class="form-group">
+            <mat-form-field class="input-style">
+              <input matInput placeholder="Назва" class="form-control" formControlName="name">
+            </mat-form-field>
+            <ng-container *ngFor="let validation of validation_messages.name">
+              <mat-error *ngIf="userCreateForm.get('name').hasError(validation.type) && (userCreateForm.get('name').dirty || userCreateForm.get('name').touched)">{{validation.message}}</mat-error>
+            </ng-container>
+          </div>
+
+          <div class="form-group">
+            <mat-form-field class="input-style">
+              <input matInput placeholder="Опис до товару" class="form-control" formControlName="comment">
+            </mat-form-field>
+            <ng-container *ngFor="let validation of validation_messages.comment">
+              <mat-error *ngIf="userCreateForm.get('comment').hasError(validation.type) && (userCreateForm.get('comment').dirty || userCreateForm.get('comment').touched)">{{validation.message}}</mat-error>
+            </ng-container>
+          </div>
+
+          <div class="form-group">
+            <mat-form-field class="input-style">
+              <input matInput type="number" min="0" placeholder="Ціна" class="form-control" formControlName="price">
+            </mat-form-field>
+            <ng-container *ngFor="let validation of validation_messages.price">
+              <mat-error *ngIf="userCreateForm.get('price').hasError(validation.type) && (userCreateForm.get('price').dirty || userCreateForm.get('price').touched)">{{validation.message}}</mat-error>
+            </ng-container>
+          </div>
+          <div class="form-group">
+            <mat-form-field class="input-style">
+              <input matInput type="number" min="0" placeholder="Кількість" class="form-control" formControlName="quantity">
+            </mat-form-field>
+          </div>
+
+          <div class="row submit-button-container">
+            <div class="col-md-4">
+              <button mat-raised-button class="submit-button" color="primary" type="submit" [disabled]="!userCreateForm.valid">Створити</button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

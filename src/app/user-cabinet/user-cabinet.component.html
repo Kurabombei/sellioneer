@@ -1,0 +1,50 @@
+<div *ngIf="auth.user$ | async; then authenticated else guest">
+  <!-- template will replace this div -->
+  <card><strong>error here</strong></card>
+</div>
+
+<!-- User NOT logged in -->
+<ng-template #guest>
+  <h3>Привіт друже,</h3>
+  <p>Ввійди щоб продовжити . . .</p>
+
+  <button (click)="auth.googleSignin()">
+    <i class="fa fa-google"></i> Connect Google
+  </button>
+
+</ng-template>
+
+
+<!-- User logged in -->
+<ng-template #authenticated>
+  <div *ngIf="this.user$ | async as user">
+    <mat-card class="profile-card">
+      <mat-card-header>
+        <div mat-card-avatar class="header-image"></div>
+        <mat-card-title>{{ user.name }}</mat-card-title>
+        <mat-card-subtitle>Користувач з великої букви</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image [src]="user.avatar" alt="Profile picture">
+      <mat-card-content>
+        Ваш ідентифікатор: {{ user.uid }}<br/>
+        Ваш вік: {{ user.age }}
+        Ваша поштова скринька: {{ user.email }}
+        Ваш рейтинг : {{ user.rating }}
+        Статус провайдера : {{ user.role }}
+      </mat-card-content>
+      <mat-card-actions>
+        <div class="col col-md-2 actions-col">
+<!--# todo check next line if viewDetails(user) or viewDetails(user$) if needed-->
+          <button mat-raised-button color="primary" (click)="viewDetails(this.currentUserID)" type="button">
+            Змінити дані
+            <ion-icon class="icon" name="arrow-round-forward"></ion-icon>
+          </button>
+          <button mat-raised-button color="accent" (click)="alertWork()">Стати продавцем</button>
+          <button mat-raised-button color="secondary" (click)="auth.signOut()">Вийти</button>
+        </div>
+<!--        <a routerLink="details/:id">Змінити дані</a>-->
+
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</ng-template>
