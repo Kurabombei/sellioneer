@@ -1,8 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {auth} from 'firebase';
+import {Component, OnInit} from '@angular/core';
 import {AuthService} from '../services/auth.service';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {MatDialog} from '@angular/material/dialog';
 import {Router} from '@angular/router';
 import {UsersService} from '../services/users.service';
 

@@ -2,7 +2,6 @@ import {Component, HostListener, ViewChild} from '@angular/core';
 import { AngularFirestore  } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { auth } from 'firebase/app';
 import {MatSidenav} from '@angular/material/sidenav';
 import {AuthService} from './services/auth.service';
 
