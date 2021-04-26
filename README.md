@@ -2,26 +2,18 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0.
 
-## Development server
+## Technologies
+Typescript, Angular 10, AngularFire, Angular Material, Bootstrap 4 for frontend, and Firebase (Google),
+Firestore (NoSQL), Mapbox (Map creation, customization and interaction with it) for backend.
+## Goal
+The main purpose of this system for local sale of goods and services is to
+connect potential sellers and interested buyers not through expensive stores or
+salons, but directly to each other. The task is always on point, because in our
+society more and more online stores are opening, which sell their products or
+services at a fairly inflated price, although the services or goods are bought three
+times cheaper, and the performers of these services can perform their work
+directly to customers for a higher pay. Getting more than from centralized sales
+from someone else's store is way better not only for a provider, but even for a user
+it is much cheaper to get services directly. This is what this system provides.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
