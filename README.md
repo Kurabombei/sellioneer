@@ -5,6 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Technologies
 Typescript, Angular 10, AngularFire, Angular Material, Bootstrap 4 for frontend, and Firebase (Google),
 Firestore (NoSQL), Mapbox (Map creation, customization and interaction with it) for backend.
+
 ## Goal
 The main purpose of this system for local sale of goods and services is to
 connect potential sellers and interested buyers not through expensive stores or
@@ -16,4 +17,5 @@ directly to customers for a higher pay. Getting more than from centralized sales
 from someone else's store is way better not only for a provider, but even for a user
 it is much cheaper to get services directly. This is what this system provides.
 
-
+### Status
+*Currently postponed due to creating other cool apps or looking for a awesome dream job.*
